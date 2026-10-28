@@ -4,552 +4,144 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>以色列不只一個人</title>
-<meta name="description" content="四頁圖像小說：2026 年 10 月 27 日以色列國會大選，看懂執政陣營、反對陣營、阿拉伯政黨與開票夜的僵局。">
-<meta property="og:title" content="以色列不只一個人｜2026 大選圖像小說">
-<meta property="og:description" content="四頁看懂以色列 2026 大選：政黨、人物、立場與開票夜。">
+<meta name="description" content="四頁圖像小說：以色列 2026 國會大選的政黨、人物與立場，給台灣讀者看懂以色列不只有尼坦雅胡。">
+<meta property="og:title" content="以色列不只一個人｜四頁圖像小說">
+<meta property="og:description" content="以色列 2026 國會大選的政黨、人物與立場，四頁漫畫看懂。">
 <meta property="og:image" content="https://richyli.github.io/israel-2026-comic/img/og.jpg">
 <meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Huninn&display=swap" rel="stylesheet">
 <style>
-:root{
-  --paper:#f4eee3; --ink:#1d1a17; --ink2:#4a443d; --rule:#1d1a17;
-  --cap:#f6d77a; --bubble:#ffffff; --muted:#7a7166;
-  --likud:#1f5fae; --rz:#c57b1d; --otzma:#7a3b1d; --shas:#2b2b2b; --utj:#9aa1ab;
-  --yashar:#118a8a; --beyahad:#4fb3d9; --yb:#5a3e8e; --dem:#c8323a;
-  --raam:#2f8a3a; --joint:#a8327a; --gantz:#8aa0b8;
-  --body:"Inter","Segoe UI","Helvetica Neue",Arial,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-  --display:"Georgia","Times New Roman","Noto Serif TC","PMingLiU",serif;
-}
+:root{--ink:#1d1a17;--paper:#efe7d6;--bar:#16324a;--accent:#f2d27a}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-html,body{margin:0}
-body{background:#d9d0c1;color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55}
-.top{position:sticky;top:0;z-index:5;background:var(--ink);color:#fff;display:flex;align-items:center;gap:16px;padding:8px 20px;flex-wrap:wrap}
-.top h1{font-family:var(--display);font-size:20px;margin:0;font-weight:900;letter-spacing:.04em}
-.top .sub{font-size:12.5px;color:#cfc6b8}
-.tabs{display:flex;gap:6px;margin-left:auto;align-items:center}
-.tabs button{font:inherit;font-size:13px;border:1.5px solid #fff;background:transparent;color:#fff;border-radius:999px;padding:4px 12px;cursor:pointer}
-.tabs button:disabled{opacity:.35;cursor:default}
-.tabs button[aria-current="true"]{background:var(--cap);color:var(--ink);border-color:var(--cap);font-weight:700}
-.tabs .arrow{border-radius:6px;padding:4px 10px}
-main{max-width:1320px;margin:14px auto 40px;padding:0 16px}
-.page{background:var(--paper);border:3px solid var(--rule);box-shadow:6px 6px 0 rgba(0,0,0,.25);padding:16px;position:relative}
-.page-head{display:flex;align-items:baseline;gap:14px;margin:0 0 12px;border-bottom:3px solid var(--rule);padding-bottom:8px;flex-wrap:wrap}
-.page-head .no{font-family:var(--display);font-weight:900;font-size:15px;background:var(--ink);color:var(--paper);padding:2px 10px}
-.page-head h2{font-family:var(--display);font-weight:900;font-size:26px;margin:0;line-height:1.2}
-.page-head .kicker{color:var(--ink2);font-size:14px}
-.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px}
-.grid>*{min-width:0}
-.page{scroll-margin-top:60px}
-.panel{border:2.5px solid var(--rule);background:#fffaf1;position:relative;overflow:hidden;padding:12px}
-.panel.img{padding:0;background:#222}
-.panel.img img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:16/9}
-.span7{grid-column:span 7}.span5{grid-column:span 5}.span12{grid-column:span 12}.span6{grid-column:span 6}.span4{grid-column:span 4}.span8{grid-column:span 8}.span3{grid-column:span 3}
-.stack{display:flex;flex-direction:column;gap:12px}
-.cap{background:var(--cap);border:2px solid var(--rule);padding:6px 10px;font-family:var(--display);font-weight:600;font-size:14.5px;line-height:1.45}
-.panel.img .cap{position:absolute;left:10px;top:10px;max-width:62%;box-shadow:3px 3px 0 rgba(0,0,0,.35)}
-.panel.img .cap.br{left:auto;right:10px;top:auto;bottom:10px}
-.talk{display:flex;gap:10px;align-items:flex-start;margin:6px 0}
-.talk.r{flex-direction:row-reverse}
-.who{flex:0 0 46px;text-align:center;font-size:11px;color:var(--ink2);font-weight:700}
-.who svg{width:46px;height:46px;display:block}
-.bub{background:var(--bubble);border:2px solid var(--rule);border-radius:16px;padding:7px 11px;position:relative;font-size:14.5px}
-.talk .bub::before{content:"";position:absolute;left:-10px;top:12px;border:8px solid transparent;border-right-color:var(--rule)}
-.talk.r .bub::before{left:auto;right:-10px;border-right-color:transparent;border-left-color:var(--rule)}
-.bub b{font-weight:800}
-.tw{background:#e7f0ea;border:2px dashed #2f6b47;padding:9px 12px;font-size:14px}
-.tw .lab{display:inline-block;background:#2f6b47;color:#fff;font-size:12px;font-weight:700;padding:1px 8px;border-radius:3px;margin-right:6px}
-h3{font-size:15px;margin:0 0 6px;font-weight:800}
-.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:4px}
-.num{border:2px solid var(--rule);background:#fff;padding:6px 6px 5px;text-align:center}
-.num .v{font-family:var(--display);font-weight:900;font-size:28px;line-height:1.05}
-.num .k{font-size:12px;color:var(--ink2);line-height:1.35}
-/* cast cards */
-.cast{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-.cast.c4{grid-template-columns:repeat(4,1fr)}
-.cast.c2{grid-template-columns:repeat(2,1fr)}
-.card{border:2.5px solid var(--rule);background:#fff;display:flex;flex-direction:column;min-width:0}
-.card .bar{height:8px;background:var(--c)}
-.card .hd{display:flex;gap:9px;padding:8px 10px 4px;align-items:center}
-.card .hd svg{flex:0 0 52px;width:52px;height:52px}
-.card .nm{font-weight:900;font-size:16px;line-height:1.2}
-.card .en{font-family:"Inter",Arial,sans-serif;font-size:11.5px;color:var(--muted)}
-.card .pt{font-size:12.5px;font-weight:700;color:var(--c)}
-.card ul{margin:2px 0 6px;padding:0 10px 0 26px;font-size:13px;line-height:1.5}
-.card li{margin:1px 0}
-.card .seat{margin-top:auto;border-top:1.5px solid #ddd;padding:5px 10px;font-size:12px;color:var(--ink2);display:flex;justify-content:space-between;gap:6px}
-.card .seat b{color:var(--ink);font-size:13.5px}
-.card.out{opacity:.72;border-style:dashed}
-.tag{display:inline-block;font-size:11px;border:1.5px solid var(--c);color:var(--c);border-radius:3px;padding:0 5px;margin:0 3px 2px 0;font-weight:700}
-/* timeline */
-.tl{list-style:none;margin:0;padding:0;border-left:3px solid var(--rule);margin-left:6px}
-.tl li{position:relative;padding:0 0 7px 14px;font-size:13.5px}
-.tl li::before{content:"";position:absolute;left:-8px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--paper);border:2.5px solid var(--rule)}
-.tl li.hot::before{background:var(--dem)}
-.tl .d{font-weight:800;font-family:"Inter",Arial,sans-serif;font-size:12.5px;margin-right:4px}
-/* spectrum */
-.spec svg{width:100%;max-width:470px;height:auto;display:block;margin:0 auto}
-.small{font-size:12px;color:var(--ink2)}
-/* polls */
-table.polls{border-collapse:collapse;width:100%;font-size:13px}
-table.polls th,table.polls td{border-bottom:1px solid #d8cfc0;padding:3px 6px;text-align:right}
-table.polls th:first-child,table.polls td:first-child{text-align:left}
-table.polls thead th{border-bottom:2px solid var(--rule);font-size:12px}
-.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
-.blocs{display:flex;flex-direction:column;gap:5px}
-.brow{display:grid;grid-template-columns:96px minmax(0,1fr) 80px;gap:8px;align-items:center;font-size:12.5px}
-.brow .gap{font-size:11.5px;color:var(--ink2);text-align:right;line-height:1.25}
-.bbar{display:flex;height:20px;border:1.5px solid var(--rule);position:relative;background:#fff}
-.bbar span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:11.5px;font-weight:800}
-.bbar .n{background:var(--likud)}.bbar .o{background:var(--yashar)}.bbar .a{background:var(--raam)}
-.bbar .tick{position:absolute;top:-4px;bottom:-4px;border-left:2px solid var(--ink);z-index:2}
-.bbar span{text-shadow:0 0 3px rgba(0,0,0,.6)}
-.scale .scalebar{position:relative;height:16px;font-size:10.5px;font-weight:700}
-.scale .mk{position:absolute;bottom:0;white-space:nowrap}
-.scale .mk.l{right:calc(50.83% - 5px);color:var(--likud)}.scale .mk.r{left:calc(49.17% - 5px);color:#0c6d6d}
-.hemiwrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:10px;align-items:start}
-.legend{font-size:12px;color:var(--ink2);display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
-.paths{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.paths.p1col{grid-template-columns:1fr}
-.path{border:2px solid var(--rule);background:#fff;padding:8px 10px;font-size:13.5px}
-.path .h{font-weight:900;margin-bottom:3px}
-.warn{background:#fbe9e4;border:2px solid #9c3b25;padding:9px 12px;font-size:13.5px}
-.warn .lab{display:inline-block;background:#9c3b25;color:#fff;font-size:12px;font-weight:700;padding:1px 8px;border-radius:3px;margin-right:6px}
-.foot{display:flex;justify-content:space-between;align-items:center;margin-top:12px;gap:12px;flex-wrap:wrap}
-.foot button{font:inherit;font-weight:700;border:2.5px solid var(--rule);background:var(--cap);padding:6px 16px;cursor:pointer;box-shadow:3px 3px 0 var(--rule)}
-.foot button:disabled{opacity:.35;cursor:default}
-.src{font-size:12px;color:var(--ink2);line-height:1.6}
-.src a{color:#1f4f8a}
-#hemi{width:100%;height:auto;display:block}
-@media (max-width:1000px){
-  .hemiwrap{grid-template-columns:1fr}
-  .span7,.span5,.span6,.span4,.span8,.span3{grid-column:span 12}
-  .cast,.cast.c4{grid-template-columns:repeat(2,1fr)}
-  .paths{grid-template-columns:1fr}
+html,body{margin:0;background:#2a2522;color:#f3ede2;font-family:"Comic Neue","Huninn","Microsoft JhengHei",sans-serif}
+.top{position:sticky;top:0;z-index:5;height:52px;background:var(--bar);display:flex;align-items:center;gap:14px;padding:0 18px}
+.top h1{font-family:"Huninn",sans-serif;font-weight:400;font-size:21px;margin:0;letter-spacing:.06em}
+.top .sub{font-size:13px;color:#c9d6e2;font-family:"Huninn",sans-serif}
+.tip{margin-left:auto;font-family:"Huninn",sans-serif;font-size:12.5px;color:#c9d6e2}
+.tx{font-family:"Huninn",sans-serif;font-size:14px;color:#16324a;background:#f2d27a;border-radius:999px;padding:4px 12px;text-decoration:none}
+.nav{display:flex;gap:6px;align-items:center}
+.nav button{font-family:"Huninn",sans-serif;font-size:14px;background:transparent;color:#fff;border:1.5px solid #fff;border-radius:999px;padding:4px 13px;cursor:pointer}
+.nav button[aria-current="true"]{background:var(--accent);color:var(--ink);border-color:var(--accent)}
+.nav button:disabled{opacity:.3;cursor:default}
+.stage{display:flex;justify-content:center;align-items:flex-start;gap:14px;padding:12px 12px 6px}
+.stage figure{margin:0;height:calc(100vh - 76px);aspect-ratio:1000/1294;max-width:calc(50vw - 20px)}
+.stage img{width:100%;height:100%;object-fit:contain;display:block;background:var(--paper);box-shadow:0 6px 24px rgba(0,0,0,.45);cursor:zoom-in}
+.hint{text-align:center;font-family:"Huninn",sans-serif;font-size:12.5px;color:#b9ae9c;margin:0 0 10px}
+.extra{max-width:900px;margin:10px auto 40px;padding:0 16px;font-family:"Huninn",sans-serif;font-size:15px;line-height:1.75}
+.extra details{background:#352f2a;border-radius:8px;padding:10px 16px;margin:10px 0}
+.extra summary{cursor:pointer;font-size:16px}
+.extra h3{font-weight:400;color:var(--accent);margin:14px 0 4px;font-size:16px}
+.extra p{margin:4px 0}
+.extra a{color:#9fd0ff}
+.warn{border-left:4px solid #e0795e;padding:6px 12px;background:#3b2a25;border-radius:4px}
+.zoom{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:20;overflow:auto;display:flex;justify-content:center;align-items:flex-start;cursor:zoom-out}
+.zoom img{width:min(1200px,100vw);height:auto;display:block}
+.zoom button{position:fixed;font-size:22px;width:48px;height:48px;border-radius:50%;border:2px solid #fff;background:rgba(22,50,74,.85);color:#fff;cursor:pointer}
+.zx{top:14px;right:14px}.zp{left:14px;top:50%}.zn{right:14px;top:50%}
+.zoom button:disabled{opacity:.25}
+.pt{display:none}
+@media (max-width:820px){
+  .top{height:auto;flex-wrap:wrap;padding:8px 12px;gap:4px 10px}
+  .nav{display:none}
+  .stage{flex-direction:column;align-items:center;padding:8px 0}
+  .stage figure{height:auto;width:100%;max-width:none}
+  .stage img{height:auto;cursor:zoom-in}
+  .tip{display:none}.tx{margin-left:auto}
+  .zoom img{width:1100px;max-width:none}
+  .pt{display:block;margin:6px 12px 14px;font-family:"Huninn",sans-serif;font-size:15px;line-height:1.7;color:#e9e1d3}
+  .pt summary{color:#f2d27a;cursor:pointer}
 }
-@media (max-width:560px){
-  main{padding:0 8px}
-  .page{padding:10px}
-  .page-head h2{font-size:21px}
-  .cast,.cast.c4,.cast.c2{grid-template-columns:1fr}
-  .nums{grid-template-columns:repeat(2,1fr)}
-  .panel.img .cap,.panel.img .cap.br{position:static;max-width:none;box-shadow:none;border-width:2px 0 0;font-size:13.5px}
-  .panel.img img{height:auto}
-  .top{padding:8px 10px;gap:4px 8px}
-  .top h1{font-size:18px}
-  .top .sub{font-size:11.5px}
-  .tabs{margin-left:0;width:100%;justify-content:space-between}
-  .tabs button{padding:8px 14px;font-size:14px}
-  .tabs .lbl{display:none}
-  .card .seat{justify-content:flex-start}
-  .brow{grid-template-columns:62px minmax(0,1fr) 62px}
-  .scale .mk{font-size:9.5px}
-}
-@media print{.top,.foot button{display:none}.page{page-break-after:always;box-shadow:none}.page[hidden]{display:block!important}}
 </style>
 </head>
 <body>
-
 <header class="top">
   <h1>以色列不只一個人</h1>
-  <span class="sub">2026 年 10 月 27 日國會大選・四頁圖像小說</span>
-  <nav class="tabs" aria-label="翻頁">
-    <button class="arrow" data-step="-1" aria-label="上一頁">◄</button>
-    <button data-go="1">1<span class="lbl"> 遊戲規則</span></button>
-    <button data-go="2">2<span class="lbl"> 執政陣營</span></button>
-    <button data-go="3">3<span class="lbl"> 反對陣營</span></button>
-    <button data-go="4">4<span class="lbl"> 開票夜</span></button>
-    <button class="arrow" data-step="1" aria-label="下一頁">►</button>
+  <span class="sub">四頁圖像小說・以色列 2026 國會大選</span>
+  <span class="tip">點頁面放大・← → 翻頁</span>
+  <a class="tx" href="#extra">文字版・來源</a>
+  <nav class="nav" aria-label="翻頁">
+    <button data-step="-1" aria-label="上一跨頁">◄</button>
+    <button data-spread="0">第 1–2 頁</button>
+    <button data-spread="1">第 3–4 頁</button>
+    <button data-step="1" aria-label="下一跨頁">►</button>
   </nav>
 </header>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="bust" viewBox="0 0 52 52">
-      <circle cx="26" cy="26" r="25" fill="var(--c)"/>
-      <path d="M8 52c1-11 8-17 18-17s17 6 18 17z" fill="#2a2522"/>
-      <circle cx="26" cy="21" r="10" fill="#e8c9a8"/>
-    </symbol>
-    <symbol id="kippah" viewBox="0 0 52 52"><path d="M19 13.5c3-3.5 11-3.5 14 0z" fill="#3b2f8a"/></symbol>
-    <symbol id="hat" viewBox="0 0 52 52"><path d="M13 14h26v2H13z M18 6h16v9H18z" fill="#111"/></symbol>
-    <symbol id="grey" viewBox="0 0 52 52"><path d="M16 20c0-9 20-9 20 0c-1-4-4-6-10-6s-9 2-10 6z" fill="#cfcfcf"/></symbol>
-    <symbol id="beret" viewBox="0 0 52 52"><path d="M15 15c2-6 20-7 23-1c-6-1-16-1-23 1z" fill="#596b3a"/></symbol>
-    <symbol id="ahching" viewBox="0 0 46 46">
-      <circle cx="23" cy="23" r="22" fill="#f6d77a" stroke="#1d1a17" stroke-width="2"/>
-      <path d="M8 46c1-9 7-14 15-14s14 5 15 14z" fill="#d9a21b"/>
-      <circle cx="23" cy="19" r="9" fill="#efcfae"/>
-      <path d="M13 21c-1-10 4-13 10-13s11 3 10 13c-1-4-3-6-4-7c-3 2-9 2-12 0c-2 2-3 4-4 7z" fill="#151515"/>
-      <circle cx="19.5" cy="20" r="2.6" fill="none" stroke="#151515" stroke-width="1.2"/><circle cx="26.5" cy="20" r="2.6" fill="none" stroke="#151515" stroke-width="1.2"/>
-    </symbol>
-    <symbol id="noa" viewBox="0 0 46 46">
-      <circle cx="23" cy="23" r="22" fill="#cfe0c6" stroke="#1d1a17" stroke-width="2"/>
-      <path d="M8 46c1-9 7-14 15-14s14 5 15 14z" fill="#5d6b3a"/>
-      <circle cx="11" cy="18" r="5" fill="#3a2418"/><circle cx="35" cy="18" r="5" fill="#3a2418"/>
-      <circle cx="13" cy="11" r="5" fill="#3a2418"/><circle cx="33" cy="11" r="5" fill="#3a2418"/><circle cx="23" cy="8" r="6" fill="#3a2418"/>
-      <circle cx="23" cy="20" r="9" fill="#d9ad86"/>
-    </symbol>
-  </defs>
-</svg>
-
-<main>
-
-<!-- ============ PAGE 1 ============ -->
-<section class="page" id="p1" data-page="1" aria-label="第 1 頁">
-  <div class="page-head">
-    <span class="no">第 1 頁</span>
-    <h2>新聞裡只有一張臉，國會裡有 120 個座位</h2>
-    <span class="kicker">以色列的選舉遊戲規則</span>
-  </div>
-  <div class="grid">
-    <div class="panel img span7">
-      <img src="img/p1_hemicycle.jpg" alt="兩位女性從背後仰望一座半圓形議場，座位一塊塊亮著不同顏色；其中一人手機螢幕上只有一個灰色男子剪影。">
-      <div class="cap">台灣新聞講到以色列，十則有九則的主角是同一個人：總理尼坦雅胡（Benjamin Netanyahu）。<br>但以色列國會（Knesset）有 120 席，這次大選有 38 份名單登記參選。</div>
-    </div>
-    <div class="span5 stack">
-      <div class="panel">
-        <div class="talk"><div class="who"><svg><use href="#ahching"/></svg>阿晴</div><div class="bub">諾雅，以色列不就是尼坦雅胡嗎？他已經當總理快二十年了。</div></div>
-        <div class="talk r"><div class="who"><svg><use href="#noa"/></svg>諾雅</div><div class="bub">他是任期最長的總理沒錯。但以色列<b>從來沒有一個政黨單獨過半</b>。每一任總理都是靠好幾個黨拼起來的，尼坦雅胡也一樣。</div></div>
-        <div class="talk"><div class="who"><svg><use href="#ahching"/></svg>阿晴</div><div class="bub">所以選民投的不是總理？</div></div>
-        <div class="talk r"><div class="who"><svg><use href="#noa"/></svg>諾雅</div><div class="bub">投的是<b>政黨名單</b>。全國只有一個選區，得票率換算成席次。湊到 61 席的人，才能當總理。</div></div>
-      </div>
-      <div class="panel">
-        <h3>四個數字看懂規則</h3>
-        <div class="nums">
-          <div class="num"><div class="v">120</div><div class="k">國會席次<br>全部比例代表</div></div>
-          <div class="num"><div class="v">3.25%</div><div class="k">進國會門檻<br>約等於 4 席</div></div>
-          <div class="num"><div class="v">61</div><div class="k">組閣要過半<br>的席次</div></div>
-          <div class="num"><div class="v">6</div><div class="k">2019 年以來<br>第 6 次大選</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="panel span4">
-      <h3>選完之後才是正戲：組閣</h3>
-      <ol style="margin:0;padding-left:20px;font-size:13.5px">
-        <li>總統（虛位元首，由國會選出）逐一約見各黨，問「你推薦誰當總理」。</li>
-        <li>總統把組閣權交給最有機會湊到 61 席的人，先給 28 天，可再延 14 天。</li>
-        <li>湊不到，就換人試；再不行，國會解散、重選。2019 到 2022 年就這樣連選了五次。</li>
-      </ol>
-    </div>
-    <div class="panel span4">
-      <h3>這次為什麼特別</h3>
-      <p style="margin:0;font-size:13.5px">上一屆國會 2022 年底上任，撐滿四年任期，2026 年 7 月 17 日解散，10 月 27 日投票。<b>這是 38 年來第一次</b>國會做滿一整屆才改選。中間經過了 2023 年的司法改革大抗爭、10 月 7 日哈瑪斯襲擊、加薩戰爭與伊朗戰事。</p>
-    </div>
-    <div class="span4 stack">
-      <div class="tw"><span class="lab">台灣對照</span>想像立法院 113 席<b>全部都是不分區</b>，門檻從 5% 降到 3.25%，而且行政院長要由立委投票過半產生。小黨就會變多，而且每個小黨都可能是組閣的關鍵一票。</div>
-      <div class="talk r" style="margin:0"><div class="who"><svg><use href="#noa"/></svg>諾雅</div><div class="bub">所以要看懂以色列，先別看一個人，要看<b>兩個陣營</b>和<b>夾在中間的第三股力量</b>。翻下一頁。</div></div>
-    </div>
-  </div>
-  <div class="foot"><span class="small">人物頭像為示意符號，不是肖像；兩位導覽者阿晴與諾雅是虛構角色。</span><button data-step="1">下一頁：執政陣營 ►</button></div>
-</section>
-
-<!-- ============ PAGE 2 ============ -->
-<section class="page" id="p2" data-page="2" aria-label="第 2 頁" hidden>
-  <div class="page-head">
-    <span class="no">第 2 頁</span>
-    <h2>尼坦雅胡陣營：右派、宗教右派與極端正統派</h2>
-    <span class="kicker">2022 年組成、以色列史上最右的執政聯盟</span>
-  </div>
-  <div class="grid">
-    <div class="panel img span7">
-      <img src="img/p2_table.jpg" alt="耶路撒冷石牆會議室裡一張長木桌，五張風格不同的空椅子各放著黑色寬邊帽、編織小圓帽、宗教書、軍用地圖與一張大皮椅；兩位女性站在門口觀察。">
-      <div class="cap br">2022 年底，尼坦雅胡拼出 64 席的聯合政府。<br>五張椅子坐的是五種不同的人，要的東西也不一樣。</div>
-    </div>
-    <div class="span5 stack">
-      <div class="panel">
-        <div class="talk"><div class="who"><svg><use href="#ahching"/></svg>阿晴</div><div class="bub">同一陣營，應該立場都差不多吧？</div></div>
-        <div class="talk r"><div class="who"><svg><use href="#noa"/></svg>諾雅</div><div class="bub">差很多。聯合黨要的是執政和安全；宗教錫安黨與猶太力量黨要的是約旦河西岸的土地；極端正統派要的是<b>全職讀經的人不用當兵</b>。最後把聯盟撐裂的，就是兵役這件事。</div></div>
-      </div>
-      <div class="panel">
-        <h3>這四年的裂縫</h3>
-        <ul class="tl">
-          <li class="hot"><span class="d">2023-01</span>推司法改革、限縮最高法院，引發數十萬人連續數月上街；7 月通過「合理性」修法，2024 年 1 月被最高法院以 8 比 7 推翻。</li>
-          <li class="hot"><span class="d">2023-10-07</span>哈瑪斯突襲以色列南部，約 1,200 人遇害；之後是長達兩年多的加薩戰爭。至今政府沒有成立國家調查委員會。</li>
-          <li><span class="d">2025-01</span>猶太力量黨因加薩停火退出內閣，3 月停火破局後回鍋。</li>
-          <li class="hot"><span class="d">2025-07</span>聖經猶太教聯盟因兵役法退出政府，夏斯黨部長也跟著請辭。</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="span12">
-      <div class="cast">
-        <article class="card" style="--c:var(--likud)">
-          <div class="bar"></div>
-          <div class="hd"><svg><use href="#bust"/><use href="#grey"/></svg><div><div class="nm">尼坦雅胡</div><div class="en">Benjamin Netanyahu</div><div class="pt">聯合黨 Likud</div></div></div>
-          <ul><li>現任總理，任期最長的總理</li><li>主打安全牌，承諾對哈瑪斯「全面勝利」</li><li>2020 年起受審貪腐案，本人否認；2025 年 11 月向總統申請特赦</li></ul>
-          <div class="seat"><span>出口民調</span><b>24–27 席</b></div>
-        </article>
-        <article class="card" style="--c:var(--rz)">
-          <div class="bar"></div>
-          <div class="hd"><svg><use href="#bust"/><use href="#kippah"/></svg><div><div class="nm">史莫崔赫</div><div class="en">Bezalel Smotrich</div><div class="pt">宗教錫安黨</div></div></div>
-          <ul><li>財政部長，屯墾運動出身</li><li>主張約旦河西岸納入以色列主權、反對巴勒斯坦建國</li></ul>
-          <div class="seat"><span>出口民調</span><b>約 6 席</b></div>
-        </article>
-        <article class="card" style="--c:var(--otzma)">
-          <div class="bar"></div>
-          <div class="hd"><svg><use href="#bust"/><use href="#kippah"/></svg><div><div class="nm">班吉維爾</div><div class="en">Itamar Ben-Gvir</div><div class="pt">猶太力量黨 Otzma Yehudit</div></div></div>
-          <ul><li>國家安全部長，極右派</li><li>反對與哈瑪斯停火，主張強硬治安政策</li><li>拒絕與宗教錫安黨合併，這次分開參選</li></ul>
-          <div class="seat"><span>出口民調</span><b>6–7 席</b></div>
-        </article>
-        <article class="card" style="--c:var(--shas)">
-          <div class="bar"></div>
-          <div class="hd"><svg><use href="#bust"/><use href="#kippah"/></svg><div><div class="nm">戴瑞</div><div class="en">Aryeh Deri</div><div class="pt">夏斯黨 Shas</div></div></div>
-          <ul><li>代表中東、北非裔（Mizrahi）的極端正統派</li><li>重視宗教教育經費與社會福利</li><li>部長請辭但沒有離開執政聯盟</li></ul>
-          <div class="seat"><span>出口民調</span><b>6–7 席</b></div>
-        </article>
-        <article class="card" style="--c:var(--utj)">
-          <div class="bar"></div>
-          <div class="hd"><svg><use href="#bust"/><use href="#hat"/></svg><div><div class="nm">聖經猶太教聯盟</div><div class="en">UTJ・Yaakov Asher</div><div class="pt">歐洲裔極端正統派</div></div></div>
-          <ul><li>核心訴求：讀經學生免服兵役</li><li>2025 年 7 月退出政府</li><li>選後是兩邊都在拉的對象</li></ul>
-          <div class="seat"><span>出口民調</span><b>6–7 席</b></div>
-        </article>
-      </div>
-    </div>
-
-    <div class="span8 tw"><span class="lab">台灣對照</span>台灣 2024 年恢復一年期義務役，役男都要服役。想像有一群人因為全職讀經而集體免役，人口又持續成長；10 月 7 日之後後備軍人一再被徵召，這件事就從宗教議題變成「憑什麼只有我去」的公平問題。</div>
-    <div class="span4 talk r" style="margin:0"><div class="who"><svg><use href="#noa"/></svg>諾雅</div><div class="bub">所以反對尼坦雅胡的人，也不全是左派。下一頁你會看到好幾位右派。</div></div>
-  </div>
-  <div class="foot"><button data-step="-1">◄ 上一頁</button><span class="small">出口民調區間取第 12、13 台與公共電視 Kan 初版與修正版；第 14 台估聯合黨 30 席，為偏高的離群值。</span><button data-step="1">下一頁：反對陣營 ►</button></div>
-</section>
-
-<!-- ============ PAGE 3 ============ -->
-<section class="page" id="p3" data-page="3" aria-label="第 3 頁" hidden>
-  <div class="page-head">
-    <span class="no">第 3 頁</span>
-    <h2>反對陣營：反尼坦雅胡，不等於左派</h2>
-    <span class="kicker">兩位前總參謀長、兩位前總理、一位前副總參謀長</span>
-  </div>
-  <div class="grid">
-    <div class="panel img span7">
-      <img src="img/p3_street.jpg" alt="台拉維夫傍晚的大街上擠滿各年齡層民眾，揮著藍白國旗與空白標語牌，兩位女性在人群中邊走邊記筆記。">
-      <div class="cap">2023 年起，台拉維夫的街頭幾乎每週都有人。<br>抗議司法改革、要求救回人質、要求調查 10 月 7 日的失誤。</div>
-    </div>
-    <div class="span5 stack">
-      <div class="panel">
-        <div class="talk"><div class="who"><svg><use href="#ahching"/></svg>阿晴</div><div class="bub">那反對黨就是主張和平的左派？</div></div>
-        <div class="talk r"><div class="who"><svg><use href="#noa"/></svg>諾雅</div><div class="bub">這次反對陣營最大的兩個黨，一個是<b>前總參謀長</b>領軍，一個是<b>比尼坦雅胡還右的前總理</b>。他們選前簽了協議：選前不互打，選後一起組閣。</div></div>
-        <div class="talk"><div class="who"><svg><use href="#ahching"/></svg>阿晴</div><div class="bub">那他們的共同點是什麼？</div></div>
-        <div class="talk r"><div class="who"><svg><use href="#noa"/></svg>諾雅</div><div class="bub">換掉尼坦雅胡、全民都要服役、徹查 10 月 7 日。至於巴勒斯坦，他們彼此差很遠。</div></div>
-      </div>
-    </div>
-
-    <div class="span12">
-      <div class="cast">
-        <article class="card" style="--c:var(--yashar)">
-          <div class="bar"></div>
-          <div class="hd"><svg><use href="#bust"/><use href="#grey"/></svg><div><div class="nm">艾森科特</div><div class="en">Gadi Eisenkot</div><div class="pt">Yashar!（意為「正直」）</div></div></div>
-          <ul><li>前國防軍總參謀長，10 月 7 日後進入戰時內閣，2024 年 6 月退出</li><li>兒子 2023 年 12 月在加薩陣亡</li><li>主張「錫安主義政府」、全民服役；幾乎排除與阿拉伯政黨組閣</li></ul>
-          <div class="seat"><span>出口民調</span><b>21–23 席</b></div>
-        </article>
-        <article class="card" style="--c:var(--beyahad)">
-          <div class="bar"></div>
-          <div class="hd"><svg><use href="#bust"/><use href="#kippah"/></svg><div><div class="nm">班奈特＋拉皮德</div><div class="en">Naftali Bennett & Yair Lapid</div><div class="pt">Beyahad（意為「一起」）</div></div></div>
-          <ul><li>兩位前總理 2026 年 4 月合組名單，由班奈特領銜</li><li>班奈特：宗教右派、科技創業家出身，反對巴勒斯坦建國</li><li>拉皮德：世俗中間派，前未來黨黨魁</li></ul>
-          <div class="seat"><span>出口民調</span><b>12–15 席</b></div>
-        </article>
-        <article class="card" style="--c:var(--yb)">
-          <div class="bar"></div>
-          <div class="hd"><svg><use href="#bust"/></svg><div><div class="nm">李柏曼</div><div class="en">Avigdor Lieberman</div><div class="pt">以色列家園黨</div></div></div>
-          <ul><li>前蘇聯移民出身，曾任國防部長、財政部長</li><li>安全議題鷹派，但最強硬反對極端正統派免役</li><li>代表世俗右派</li></ul>
-          <div class="seat"><span>出口民調</span><b>7–9 席</b></div>
-        </article>
-        <article class="card" style="--c:var(--dem)">
-          <div class="bar"></div>
-          <div class="hd"><svg><use href="#bust"/><use href="#grey"/></svg><div><div class="nm">戈蘭</div><div class="en">Yair Golan</div><div class="pt">民主黨 The Democrats</div></div></div>
-          <ul><li>前副總參謀長；2024 年工黨與梅瑞茲合併成民主黨</li><li>陣營裡最左：支持與巴勒斯坦分離的政治解決、捍衛司法獨立</li></ul>
-          <div class="seat"><span>出口民調</span><b>約 9 席</b></div>
-        </article>
-        <article class="card out" style="--c:var(--gantz)">
-          <div class="bar"></div>
-          <div class="hd"><svg><use href="#bust"/></svg><div><div class="nm">甘茨</div><div class="en">Benny Gantz</div><div class="pt">藍白黨（選前退選）</div></div></div>
-          <ul><li>前總參謀長，2023 年與尼坦雅胡組戰時團結政府</li><li>民調一直低於門檻，10 月 19 日宣布退選：「沒能說服足夠的人。」</li></ul>
-          <div class="seat"><span>出口民調</span><b>—</b></div>
-        </article>
-      </div>
-    </div>
-
-    <div class="span6">
-      <div class="panel spec" style="height:100%">
-        <h3>示意圖：這次選舉的兩條軸</h3>
-        <svg viewBox="0 0 400 230" role="img" aria-label="橫軸是對尼坦雅胡的態度，縱軸是巴勒斯坦議題的鷹派到鴿派，各黨位置為示意">
-          <rect x="40" y="10" width="350" height="190" fill="#fff" stroke="#1d1a17" stroke-width="1.5"/>
-          <line x1="215" y1="10" x2="215" y2="200" stroke="#1d1a17" stroke-dasharray="4 4"/>
-          <text x="40" y="218" font-size="11" fill="#4a443d">◄ 支持尼坦雅胡</text>
-          <text x="390" y="218" font-size="11" fill="#4a443d" text-anchor="end">要換掉他 ►</text>
-          <text x="14" y="20" font-size="11" fill="#4a443d" transform="rotate(90 14 20)">鷹派 ◄─ 巴勒斯坦議題 ─► 鴿派</text>
-          <g font-size="11.5" font-weight="700" fill="#fff">
-            <circle cx="95" cy="40" r="15" fill="var(--rz)"/><text x="95" y="44" text-anchor="middle">錫安</text>
-            <circle cx="65" cy="62" r="15" fill="var(--otzma)"/><text x="65" y="66" text-anchor="middle">力量</text>
-            <circle cx="130" cy="78" r="19" fill="var(--likud)"/><text x="130" y="82" text-anchor="middle">聯合</text>
-            <circle cx="165" cy="118" r="14" fill="var(--shas)"/><text x="165" y="122" text-anchor="middle">夏斯</text>
-            <circle cx="190" cy="140" r="14" fill="var(--utj)"/><text x="190" y="144" text-anchor="middle">UTJ</text>
-            <circle cx="300" cy="50" r="20" fill="var(--yb)"/><text x="300" y="54" text-anchor="middle" font-size="10.5">李柏曼</text>
-            <circle cx="255" cy="78" r="20" fill="var(--beyahad)"/><text x="255" y="82" text-anchor="middle" font-size="10.5">班奈特</text>
-            <circle cx="322" cy="112" r="22" fill="var(--yashar)"/><text x="322" y="116" text-anchor="middle" font-size="10.5">Yashar</text>
-            <circle cx="345" cy="160" r="15" fill="var(--dem)"/><text x="345" y="164" text-anchor="middle">民主</text>
-          </g>
-        </svg>
-        <div class="small">位置為依公開立場的示意，不是民調量測。極端正統派兩黨在巴勒斯坦議題上的立場較不突出，主要訴求是宗教與兵役。</div>
-      </div>
-    </div>
-    <div class="span6 stack">
-      <div class="tw"><span class="lab">台灣對照</span>台灣政治常沿著兩岸立場分邊。以色列這幾次選舉的主軸，已經變成「挺不挺尼坦雅胡」，所以右派的班奈特、李柏曼會和左派的戈蘭站在同一邊。共同目標夠大，立場差很遠的人也能暫時合作；但上臺之後怎麼分配，就很難講。</div>
-      <div class="talk r" style="margin:0"><div class="who"><svg><use href="#noa"/></svg>諾雅</div><div class="bub">2021 年班奈特和拉皮德就這樣組過一次「變革政府」，撐了一年。那次還有一個關鍵夥伴，下一頁見。</div></div>
-    </div>
-  </div>
-  <div class="foot"><button data-step="-1">◄ 上一頁</button><span class="small">其他小黨：後備軍人黨 Yoaz Hendel、前將領 Ofer Winter 的右派新黨等，能否過 3.25% 門檻仍待開票。</span><button data-step="1">下一頁：開票夜 ►</button></div>
-</section>
-
-<!-- ============ PAGE 4 ============ -->
-<section class="page" id="p4" data-page="4" aria-label="第 4 頁" hidden>
-  <div class="page-head">
-    <span class="no">第 4 頁</span>
-    <h2>開票夜：兩邊都不到 61 席</h2>
-    <span class="kicker">阿拉伯政黨是第三股力量，卻被兩邊擋在門外</span>
-  </div>
-  <div class="grid">
-    <div class="panel img span7">
-      <img src="img/p4_night.jpg" alt="左半是學校投票所前的隊伍，有戴頭巾的阿拉伯女性、穿黑外套戴帽的極端正統派男性、年輕情侶、衣索比亞裔長者與軍人；右半是兩位女性夜裡坐在沙發上看電視上幾乎平分的彩色長條。">
-      <div class="cap br">10 月 27 日，投票率約 77.7%，是數十年來最高。<br>約兩成的公民是阿拉伯裔，他們也排在同一條隊伍裡。</div>
-    </div>
-    <div class="panel span5">
-      <h3>出口民調的陣營席次</h3>
-      <div class="brow"><span></span><span class="small">任一邊要 61 席才能組閣</span><span class="gap">各缺幾席<br><b style="color:var(--likud)">執政</b>｜<b style="color:#0c6d6d">反對</b></span></div>
-      <div class="blocs" id="blocs"></div>
-      <div class="legend"><span><i class="sw" style="background:var(--likud)"></i>尼坦雅胡陣營</span><span><i class="sw" style="background:var(--yashar)"></i>反對陣營</span><span><i class="sw" style="background:var(--raam)"></i>阿拉伯政黨</span></div>
-      <div class="small" style="margin-top:4px">第 14 台與 i24NEWS 對執政陣營估得最高，各台差距達 10 席。這些都是出口民調，不是正式結果。</div>
-    </div>
-
-    <div class="span5 stack">
-      <div class="panel">
-        <div class="talk"><div class="who"><svg><use href="#ahching"/></svg>阿晴</div><div class="bub">兩邊都差十席左右，阿拉伯政黨有 17 到 19 席，加進去不就過半了？</div></div>
-        <div class="talk r"><div class="who"><svg><use href="#noa"/></svg>諾雅</div><div class="bub">算術上是。但艾森科特幾乎已經排除和阿拉伯政黨組閣，執政陣營更不可能。<b>最關鍵的少數，被兩邊都擋在門外</b>，這是以色列民主最大的難題之一。</div></div>
-      </div>
-      <div class="cast c2">
-        <article class="card" style="--c:var(--raam)">
-          <div class="bar"></div>
-          <div class="hd"><svg><use href="#bust"/></svg><div><div class="nm">曼蘇爾．阿巴斯</div><div class="en">Mansour Abbas</div><div class="pt">拉姆黨 Ra'am</div></div></div>
-          <ul><li>伊斯蘭派但務實，主打阿拉伯社區的治安與建設</li><li>2021 年成為史上第一個加入執政聯盟的阿拉伯政黨</li></ul>
-          <div class="seat"><span>出口民調</span><b>約 7 席</b></div>
-        </article>
-        <article class="card" style="--c:var(--joint)">
-          <div class="bar"></div>
-          <div class="hd"><svg><use href="#bust"/></svg><div><div class="nm">賈巴林</div><div class="en">Yousef Jabareen</div><div class="pt">聯合名單 Joint List</div></div></div>
-          <ul><li>由 Hadash、Ta'al 等組成，主張平等公民權與巴勒斯坦建國</li><li>一度被中選會取消參選資格，最高法院 10 月 2 日推翻</li></ul>
-          <div class="seat"><span>出口民調</span><b>9–11 席</b></div>
-        </article>
-      </div>
-      <div class="tw"><span class="lab">台灣對照</span>2024 年立法院，民眾黨 8 席就足以決定多數。以色列的阿拉伯政黨席次是它的兩倍多，卻常被當成不能碰的票。</div>
-    </div>
-    <div class="panel span7">
-      <h3>把其中一組畫成國會：第 13 台初版出口民調（共 120 席）</h3>
-      <div class="hemiwrap">
-        <div><svg id="hemi" viewBox="0 0 520 248" role="img" aria-label="依第 13 台初版出口民調繪製的 120 席半圓議場"></svg>
-        <div class="small" style="text-align:center;margin-top:2px">左：尼坦雅胡陣營 50｜中：阿拉伯政黨 17｜右：反對陣營 53<br>任何一邊都要 61 席</div></div>
-        <table class="polls" id="polltab"></table>
-      </div>
-    </div>
-
-    <div class="span12">
-      <h3 style="margin:2px 0 6px">接下來可能怎麼走</h3>
-      <div class="paths">
-        <div class="path"><div class="h">路線 A：尼坦雅胡挖角</div>拉到反對陣營的一兩個黨、或極端正統派全員歸隊，就有機會過 61 席。正式結果若讓執政陣營多出兩三席，這條路最快。</div>
-        <div class="path"><div class="h">路線 B：艾森科特拉攏極端正統派</div>據《耶路撒冷郵報》，極端正統派沒有排除與艾森科特合作。代價是兵役問題要讓步，偏偏「全民服役」正是反對陣營的主訴求。</div>
-        <div class="path"><div class="h">路線 C：再選一次</div>沒人湊得到 61 席，國會解散。2019 到 2022 年以色列就這樣連選五次，期間由看守政府執政。</div>
-      </div>
-    </div>
-
-    <div class="span7 warn"><span class="lab">這張漫畫什麼情況下會錯</span>① 正式結果預計 11 月 4 日確認，雙信封票超過 65 萬張還在驗，只要差兩三席，路線 A、B 的機率就會翻轉。② 本頁陣營歸屬依選前表態推定，極端正統派、以色列家園黨選後都可能換邊。③ 說以色列是多元民主，指的是以色列公民之間；約旦河西岸與加薩約 300 萬巴勒斯坦成年人沒有投票權，這是另一套評價民主的尺度。</div>
-    <div class="span5 talk r" style="margin:0"><div class="who"><svg><use href="#noa"/></svg>諾雅</div><div class="bub">法院推翻過執政黨的法案、幾十萬人上街、前總參謀長們出來選、阿拉伯政黨拿下紀錄席次。<b>喜不喜歡尼坦雅胡是一回事，但以色列從來不只他一個人。</b></div></div>
-  </div>
-  <div class="foot"><button data-step="-1">◄ 上一頁</button>
-    <div class="src">資料截至 2026-10-28 上午（台灣時間），開票仍在進行。來源：
-      <a href="https://www.ynetnews.com/article/skd97fc2gl">Ynet 出口民調</a>、
-      <a href="https://www.axios.com/2026/10/27/netanyahu-eisenkot-israel-election-exit-polls">Axios</a>、
-      <a href="https://www.i24news.tv/en/news/israeli-elections/artc-i24news-exit-poll-likud-wins-27-seats-yashar-20-coalition-bloc-reaches-55-seats-opposition-49-and-arab-parties-16">i24NEWS</a>、
-      <a href="https://www.timesofisrael.com/2026-israeli-elections-what-you-need-to-know/">Times of Israel</a>、
-      <a href="https://www.aljazeera.com/news/2026/10/20/israels-elections-2026-explained-in-maps-and-charts">Al Jazeera</a>、
-      <a href="https://www.aljazeera.com/news/2026/10/19/benny-gantz-drops-out-of-israels-election-race">Al Jazeera（甘茨退選）</a>、
-      <a href="https://en.wikipedia.org/wiki/2026_Israeli_legislative_election">Wikipedia</a>、
-      <a href="https://www.cna.com.tw/news/aall/202610260160.aspx">中央社</a>。譯名依中央社慣用寫法。
-    </div>
-  </div>
-</section>
-
+<main class="stage" id="stage">
+  <figure data-p="1"><img src="pages/page1.jpg" alt="第 1 頁：以色列的選舉規則（文字版在頁面下方）"></figure>
+  <figure data-p="2"><img src="pages/page2.jpg" alt="第 2 頁：尼坦雅胡陣營（文字版在頁面下方）"></figure>
+  <figure data-p="3"><img src="pages/page3.jpg" alt="第 3 頁：反對陣營（文字版在頁面下方）"></figure>
+  <figure data-p="4"><img src="pages/page4.jpg" alt="第 4 頁：阿拉伯公民與阿拉伯政黨（文字版在頁面下方）"></figure>
 </main>
 
+<section class="extra" id="extra">
+  <details id="tdetails">
+    <summary>文字版（逐格旁白與對白）</summary>
+    <div id="transcript"></div>
+  </details>
+  <p class="warn">這份漫畫什麼情況下會錯：各黨歸在哪個陣營，依的是選前的公開表態，選後組閣時可能換邊。「以色列是多元民主」指的是以色列公民之間；約旦河西岸與加薩約 300 萬巴勒斯坦成年人沒有投票權，這是評價以色列民主的另一把尺。</p>
+  <p style="font-size:13px;color:#b9ae9c">人物是依公開形象畫的插畫，不是寫實肖像；導覽者阿晴、諾雅是虛構角色。資料截至 2026 年 10 月，譯名依中央社慣用寫法。來源：
+    <a target="_blank" rel="noopener" href="https://www.timesofisrael.com/2026-israeli-elections-what-you-need-to-know/">Times of Israel</a>、
+    <a target="_blank" rel="noopener" href="https://www.aljazeera.com/news/2026/10/20/israels-elections-2026-explained-in-maps-and-charts">Al Jazeera</a>、
+    <a target="_blank" rel="noopener" href="https://www.aljazeera.com/news/2026/10/19/benny-gantz-drops-out-of-israels-election-race">Al Jazeera（甘茨退選）</a>、
+    <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/2026_Israeli_legislative_election">Wikipedia</a>、
+    <a target="_blank" rel="noopener" href="https://www.al-monitor.com/originals/2026/04/israels-president-says-he-wants-deal-reached-netanyahu-case-pardon-decision">Al-Monitor</a>、
+    <a target="_blank" rel="noopener" href="https://www.cna.com.tw/news/aall/202610260160.aspx">中央社</a>。</p>
+</section>
+
+<div class="zoom" id="zoom" hidden><img alt=""><button class="zx" data-z="x" aria-label="關閉">✕</button><button class="zp" data-z="-1" aria-label="上一頁">◄</button><button class="zn" data-z="1" aria-label="下一頁">►</button></div>
+
+<script src="transcript.js"></script>
 <script>
 (function(){
-  var pages=[].slice.call(document.querySelectorAll('.page'));
-  var cur=1;
-  function show(n,scroll){
-    n=Math.max(1,Math.min(pages.length,n));cur=n;
-    pages.forEach(function(p){p.hidden=(+p.dataset.page!==n)});
-    document.querySelectorAll('[data-go]').forEach(function(b){b.setAttribute('aria-current',+b.dataset.go===n?'true':'false')});
-    document.querySelectorAll('.tabs .arrow').forEach(function(b){b.disabled=(+b.dataset.step<0&&n===1)||(+b.dataset.step>0&&n===pages.length)});
-    try{history.replaceState(null,'','#p'+n)}catch(e){}
-    if(scroll)window.scrollTo({top:0,behavior:'smooth'});
+  var figs=[].slice.call(document.querySelectorAll('.stage figure'));
+  var imgs=figs.map(function(f){return f.querySelector('img')});
+  var spread=0, zi=-1, wide=window.matchMedia('(min-width:821px)');
+  var zoom=document.getElementById('zoom'), zimg=zoom.querySelector('img');
+  function show(s){
+    spread=Math.max(0,Math.min(1,s));
+    figs.forEach(function(f,i){f.hidden=wide.matches&&Math.floor(i/2)!==spread});
+    document.querySelectorAll('[data-spread]').forEach(function(b){b.setAttribute('aria-current',+b.dataset.spread===spread?'true':'false')});
+    document.querySelectorAll('[data-step]').forEach(function(b){b.disabled=(+b.dataset.step<0&&spread===0)||(+b.dataset.step>0&&spread===1)});
   }
+  function openZoom(i){
+    zi=Math.max(0,Math.min(imgs.length-1,i));
+    zimg.src=imgs[zi].src;zimg.alt=imgs[zi].alt;zoom.hidden=false;zoom.scrollTop=0;zoom.scrollLeft=0;
+    zoom.querySelector('.zp').disabled=zi===0;zoom.querySelector('.zn').disabled=zi===imgs.length-1;
+  }
+  function closeZoom(){zoom.hidden=true;if(zi>=0)show(Math.floor(zi/2));zi=-1}
   document.addEventListener('click',function(e){
-    var b=e.target.closest('button');if(!b)return;
-    if(b.dataset.go)show(+b.dataset.go,true);
-    if(b.dataset.step)show(cur+(+b.dataset.step),true);
+    var b=e.target.closest('button');
+    if(b&&b.dataset.z){if(b.dataset.z==='x')closeZoom();else openZoom(zi+(+b.dataset.z));return}
+    if(b&&b.dataset.spread)show(+b.dataset.spread);
+    if(b&&b.dataset.step)show(spread+(+b.dataset.step));
+    var im=e.target.closest('.stage img');
+    if(im){openZoom(imgs.indexOf(im));return}
+    if(e.target===zoom||e.target===zimg)closeZoom();
+    if(e.target.closest('a.tx'))document.getElementById('tdetails').open=true;
   });
   document.addEventListener('keydown',function(e){
-    if(e.key==='ArrowRight')show(cur+1,true);
-    if(e.key==='ArrowLeft')show(cur-1,true);
+    if(!zoom.hidden){
+      if(e.key==='Escape')closeZoom();
+      if(e.key==='ArrowRight')openZoom(zi+1);
+      if(e.key==='ArrowLeft')openZoom(zi-1);
+      return;
+    }
+    if(e.key==='ArrowRight')show(spread+1);
+    if(e.key==='ArrowLeft')show(spread-1);
   });
-  var m=/^#p([1-4])$/.exec(location.hash);show(m?+m[1]:1,false);window.scrollTo(0,0);
-  window.addEventListener('hashchange',function(){var h=/^#p([1-4])$/.exec(location.hash);if(h&&+h[1]!==cur)show(+h[1],true)});
-
-  // bloc bars
-  var polls=[
-    ['第 12 台 初版',50,52,18],['第 12 台 修正',52,49,19],['第 13 台 初版',50,53,17],
-    ['第 13 台 修正',51,51,18],['Kan 修正',51,51,18],['i24NEWS',55,49,16],['第 14 台',60,43,17]
-  ];
-  var box=document.getElementById('blocs');
-  function gap(x){return x>=61?'過半':(61-x)}
-  polls.forEach(function(p){
-    var r=document.createElement('div');r.className='brow';
-    r.innerHTML='<span>'+p[0]+'</span><div class="bbar" role="img" aria-label="'+p[0]+'：尼坦雅胡陣營 '+p[1]+'、反對陣營 '+p[2]+'、阿拉伯政黨 '+p[3]+'">'+
-      '<span class="n" style="width:'+(p[1]/120*100)+'%">'+p[1]+'</span>'+
-      '<span class="a" style="width:'+(p[3]/120*100)+'%">'+p[3]+'</span>'+
-      '<span class="o" style="width:'+(p[2]/120*100)+'%">'+p[2]+'</span></div>'+
-      '<span class="gap"><b style="color:var(--likud)">'+gap(p[1])+'</b>｜<b style="color:#0c6d6d">'+gap(p[2])+'</b></span>';
-    box.appendChild(r);
+  wide.addEventListener('change',function(){show(spread)});
+  show(0);
+  var t=document.getElementById('transcript');
+  (window.TRANSCRIPT||[]).forEach(function(pg,i){
+    var h3=document.createElement('h3');h3.textContent=pg.title;t.appendChild(h3);
+    var d=document.createElement('details');d.className='pt';
+    var sm=document.createElement('summary');sm.textContent='這頁的文字版';d.appendChild(sm);
+    pg.lines.forEach(function(l){var p=document.createElement('p');p.textContent=l;t.appendChild(p);d.appendChild(p.cloneNode(true))});
+    if(figs[i])figs[i].appendChild(d);
   });
-
-  // hemicycle from Channel 13 first exit poll (sums to 120)
-  var css=getComputedStyle(document.documentElement);
-  function c(v){return css.getPropertyValue(v).trim()}
-  var parties=[
-    ['猶太力量黨',6,'--otzma','n'],['宗教錫安黨',6,'--rz','n'],['聯合黨',25,'--likud','n'],['夏斯黨',6,'--shas','n'],['聖經猶太教聯盟',7,'--utj','n'],
-    ['拉姆黨',7,'--raam','a'],['聯合名單',10,'--joint','a'],
-    ['以色列家園黨',7,'--yb','o'],['Beyahad（班奈特）',14,'--beyahad','o'],['Yashar!（艾森科特）',23,'--yashar','o'],['民主黨',9,'--dem','o']
-  ];
-  var seats=[],rows=6,R0=105,R1=225,cx=260,cy=238;
-  for(var i=0;i<rows;i++){
-    var r=R0+(R1-R0)*i/(rows-1);seats.push({r:r,n:0});
-  }
-  var tot=seats.reduce(function(s,x){return s+x.r},0);
-  var acc=0;seats.forEach(function(s,i){s.n=Math.round(120*s.r/tot)});
-  var diff=120-seats.reduce(function(s,x){return s+x.n},0);seats[rows-1].n+=diff;
-  var pts=[];
-  seats.forEach(function(s){
-    for(var k=0;k<s.n;k++){var a=Math.PI*(1-k/(s.n-1));pts.push({a:a,x:cx+s.r*Math.cos(a),y:cy-s.r*Math.sin(a)})}
-  });
-  pts.sort(function(p,q){return q.a-p.a});
-  var colors=[];parties.forEach(function(p){for(var k=0;k<p[1];k++)colors.push(c(p[2]))});
-  var svg=document.getElementById('hemi'),ns='http://www.w3.org/2000/svg';
-  pts.forEach(function(p,i){var e=document.createElementNS(ns,'circle');e.setAttribute('cx',p.x.toFixed(1));e.setAttribute('cy',p.y.toFixed(1));e.setAttribute('r','7');e.setAttribute('fill',colors[i]);e.setAttribute('stroke','#1d1a17');e.setAttribute('stroke-width','.6');svg.appendChild(e)});
-  var t=document.createElementNS(ns,'text');t.setAttribute('x',cx);t.setAttribute('y',cy-8);t.setAttribute('text-anchor','middle');t.setAttribute('font-size','15');t.setAttribute('font-weight','800');t.textContent='50 ｜ 17 ｜ 53';if(0){svg.appendChild(t);var t2=document.createElementNS(ns,'text');t2.setAttribute('x',cx);t2.setAttribute('y',cy-14);t2.setAttribute('text-anchor','middle');t2.setAttribute('font-size','11');t2.setAttribute('fill','#4a443d');}
-
-  // party table: Ch12 first / Ch13 first
-  var tab=[['聯合黨（尼坦雅胡）','--likud',24,25],['Yashar!（艾森科特）','--yashar',22,23],['Beyahad（班奈特、拉皮德）','--beyahad',12,14],['聯合名單（賈巴林）','--joint',11,10],['民主黨（戈蘭）','--dem',9,9],['以色列家園黨（李柏曼）','--yb',9,7],['拉姆黨（阿巴斯）','--raam',7,7],['聖經猶太教聯盟','--utj',7,7],['夏斯黨（戴瑞）','--shas',6,6],['宗教錫安黨（史莫崔赫）','--rz',6,6],['猶太力量黨（班吉維爾）','--otzma',7,6]];
-  var h='<thead><tr><th>政黨（領袖）</th><th>第 12 台<br>初版</th><th>第 13 台<br>初版</th></tr></thead><tbody>';
-  tab.forEach(function(r){h+='<tr><td><i class="sw" style="background:var('+r[1]+')"></i>'+r[0]+'</td><td>'+r[2]+'</td><td>'+r[3]+'</td></tr>'});
-  document.getElementById('polltab').innerHTML=h+'</tbody>';
 })();
 </script>
 </body>
